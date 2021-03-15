@@ -1,5 +1,5 @@
 ﻿module.exports = {
-	name: 'ping',
+	name: 'geton',
 	description: 'Ping!',
 	execute(message) {
 		message.react('🤖');
