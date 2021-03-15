@@ -9,6 +9,7 @@ const help = new Discord.MessageEmbed()
 	.addFields(
 		{ name: 'Ping', value: 'makes me respond with pong!', inline: false },
 		{ name: 'Kick', value: 'Kicks the Mentioned member from the Current Guild/Server', inline: false },
+		{ name: 'Ban', value: 'Bans the Mentioned member from the Current Guild/Server', inline: false },
 		{ name: 'Get On', value: 'Gets the mentioned user online using secret techniques!', inline: false}
 	);
 module.exports = {
