@@ -1,5 +1,4 @@
-﻿
-module.exports = {
+﻿module.exports = {
 	name: 'ping',
 	description: 'Ping!',
 	execute(message) {
