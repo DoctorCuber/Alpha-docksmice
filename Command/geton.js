@@ -3,6 +3,6 @@
 	description: 'Ping!',
 	execute(message) {
 		message.react('🤖');
-		message.channel.send('Pong');
+		message.channel.send(use);
 	},
 };
