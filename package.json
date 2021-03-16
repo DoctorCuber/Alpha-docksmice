@@ -9,6 +9,7 @@
   "author": "Dhruv Redkar",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/opus": "^0.4.0",
     "discord-embed-generator": "^1.0.2",
     "discord-player": "^3.4.0",
     "discord-ytdl-core": "^5.0.1",

@@ -22,4 +22,4 @@ module.exports = {
 		message.react('🤖');
 		message.channel.send(help);
 	},
-};
+}

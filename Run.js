@@ -15,14 +15,7 @@ client.once('ready', () => {
     console.log('Ready!'); console.log('Ready!');
     console.log('Ready!'); console.log('Ready!');
     console.log('Ready!'); console.log('Ready!');
-    //client.user.setActivity('//help', { type: 'LISTENING' }).catch(console.error);
-    client.user.setPresence({
-        game: {
-            name: 'Use f!help',
-            type: "Playing",
-            url: "https://discordapp.com/"
-        }
-    });
+    client.user.setActivity('//help', { type: 'LISTENING' }).catch(console.error);
     client.user.setStatus('idle');
     console.log('fluffy');
 });
