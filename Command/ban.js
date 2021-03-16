@@ -4,10 +4,11 @@
     execute(message, args) {
         if (message.member.permissions.has("BAN_MEMBERS")) {
             const target = message.mentions.users.first();
-            if (target) {
+            var reason = args[2] || "There was no Reason";
+            if (target, reason) {
                 const memberTarget = message.guild.members.cache.get(target.id);
-                memberTarget.ban();
-                message.reply("User has been banned");
+                memberTarget.ban({reason: reason})
+                message.reply(`User has been banned for ${reason}`);
                 message.react('✅');
             } else {
                 message.reply(`Error, couldn't ban that member try to specify users.`);

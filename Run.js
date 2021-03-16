@@ -15,7 +15,7 @@ client.once('ready', () => {
     console.log('Ready!'); console.log('Ready!');
     console.log('Ready!'); console.log('Ready!');
     console.log('Ready!'); console.log('Ready!');
-    client.user.setActivity('//help', { type: 'LISTENING' }).catch(console.error);
+    client.user.setActivity('//help', { type: 'LISTENING' });
     client.user.setStatus('idle');
     console.log('fluffy');
 });
