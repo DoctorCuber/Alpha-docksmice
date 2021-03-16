@@ -13,7 +13,7 @@ module.exports = {
 				message.channel.bulkDelete(messages)
 			});
 		} else {
-			message.channel.send(`Sorry, you need the permession MANAGE_MESSAGES to execute this command!`);
+			message.reply(`Sorry, you need the permession MANAGE_MESSAGES to execute this command!`);
 		}
 			//message.channel.send('I have deleted' + message + 'messages!');
 	}
