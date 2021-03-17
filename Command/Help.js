@@ -12,7 +12,7 @@ const help = new Discord.MessageEmbed()
 		{ name: 'Ban', value: 'Bans the Mentioned member from the Current Guild/Server', inline: true },
 		//{ name: 'Get On', value: 'Gets the mentioned user online using secret techniques!', inline: false },
 		{ name: 'Clear', value: 'Clears a certain amount of messages in the channel', inline: false },
-		{ name: 'play', value: 'Starts an interactive mouse simulator!', inline: true}
+		{ name: 'join', value: 'Summons the bot into your Voice Channel', inline: true}
 		//{ Name: "Prefix", value: `Allows the user to change the prefix of the bot`}
 	);
 module.exports = {
