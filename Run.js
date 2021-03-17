@@ -9,10 +9,7 @@ const commandFiles = fs.readdirSync('./command').filter(file => file.endsWith('.
 
 const distube = require('distube')
 client.distube = new distube(client, { searchSongs: false, emitNewSongOnly: true });
-client.distube
-    .on("playSong", (message, queue, song) => message.channel.send(
-        `Playing \`${song.name}\` - \`${song.formattedDuration}\`\nRequested by: ${song.user}`
-    ))
+
 
 for (const file of commandFiles) {
     const command = require(`./command/${file}`);
