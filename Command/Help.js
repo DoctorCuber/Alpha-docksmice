@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 const help = new Discord.MessageEmbed()
 	.setColor('#00ff75')
 	.setTitle('Commands!')
-	.setThumbnail('https://images.theconversation.com/files/265294/original/file-20190322-36283-1me4pb6.jpg?ixlib=rb-1.1.0&rect=0%2C0%2C3772%2C3342&q=45&auto=format&w=926&fit=clip')
+	.setThumbnail('https://media.discordapp.net/attachments/821152234330259537/821832515500638218/winter_white_hamster2-300x213.jpg')
 	.setDescription('All the commands for DocksMice')
 	.addFields(
 		{ name: 'Ping', value: 'makes me respond with pong!', inline: true },
@@ -12,7 +12,7 @@ const help = new Discord.MessageEmbed()
 		{ name: 'Ban', value: 'Bans the Mentioned member from the Current Guild/Server', inline: true },
 		//{ name: 'Get On', value: 'Gets the mentioned user online using secret techniques!', inline: false },
 		{ name: 'Clear', value: 'Clears a certain amount of messages in the channel', inline: false },
-		{ name: 'join', value: 'Summons the bot into your Voice Channel', inline: true}
+		{ name: 'Play', value: 'starts to play a song in the Voice Channel', inline: true}
 		//{ Name: "Prefix", value: `Allows the user to change the prefix of the bot`}
 	);
 module.exports = {
