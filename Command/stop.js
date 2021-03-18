@@ -7,6 +7,7 @@ module.exports = {
     description: "makes the bot stop playing music",
     async execute(message, args) {
         const distube = require('distube');
+
         client.distube = new distube(client, { searchSongs: false, emitNewSongOnly: true });
         if (!message.member.voice.channel) return message.channel.send('You must be in a voice channel to use this command.');
 
