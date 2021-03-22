@@ -2,13 +2,14 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
-
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./command').filter(file => file.endsWith('.js'));
+DisTube = require('distube');
 
-const distube = require('distube')
-client.distube = new distube(client, { searchSongs: false, emitNewSongOnly: true });
+// Create a new DisTube
+client.distube = new DisTube(client, { searchSongs: false, emitNewSongOnly: true });
+
 
 
 for (const file of commandFiles) {

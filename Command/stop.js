@@ -1,24 +1,24 @@
+  
+module.exports.run = async (message, args) => {
+    const discord = require(`discord.js`)
+    const client = new discord.Client;
+    DisTube = require('distube');
+    client.Distube = new DisTube(client, { searchSongs: false, emitNewSongOnly: true });
 
+    if(!message.member.voice.channel) {return message.channel.send('You must be in a voice channel to use this command.')};
 
-const Discord = require('discord.js');
-const client = new Discord.Client();
-module.exports = {
-    name: "stop",
-    description: "makes the bot stop playing music",
-    async execute(message, args) {
-        const distube = require('distube');
+    let queue = await client.distube.getQueue(message);
 
-        client.distube = new distube(client, { searchSongs: false, emitNewSongOnly: true });
-        if (!message.member.voice.channel) return message.channel.send('You must be in a voice channel to use this command.');
+    if(queue) {
+        client.distube.stop(message)
 
-        let queue = await client.distube.getQueue(message);
-
-        if (queue) {
-            client.distube.stop(message)
-
-            message.channel.send('Stopped Playing!')
-        } else if (!queue) {
-            return
-        };
+        message.channel.send('DONE!')
+    } else if (!queue) {
+        return
     }
+}
+
+module.exports.config = {
+    name: "stop",
+    aliases: []
 }

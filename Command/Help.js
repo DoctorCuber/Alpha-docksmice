@@ -1,4 +1,4 @@
-﻿
+
 const Discord = require('discord.js');
 // eslint-disable-next-line no-undef
 const help = new Discord.MessageEmbed()
