@@ -1,6 +1,10 @@
   
 module.exports.run = async (message, args) => {
-    const discord = require(`discord.js`)
+
+
+    message.channel.send('`THIS COMMAND IS CURRENTLY IN BETA AND IS NOT AVAILABLE FOR USE`');
+    return;
+    const discord = require(`discord.js`);
     const client = new discord.Client;
     DisTube = require('distube');
     client.Distube = new DisTube(client, { searchSongs: false, emitNewSongOnly: true });

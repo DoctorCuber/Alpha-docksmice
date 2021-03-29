@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Command"
+    "\\Command",
+    "\\Command\\moderation"
   ],
-  "SelectedNode": "\\Command\\stop.js",
+  "SelectedNode": "\\Command\\Ping.js",
   "PreviewInSolutionExplorer": false
 }

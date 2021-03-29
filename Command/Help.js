@@ -10,8 +10,8 @@ const help = new Discord.MessageEmbed()
 		{ name: 'Ping', value: 'makes me respond with pong!', inline: true },
 		{ name: 'Kick', value: 'Kicks the Mentioned member from the Current Guild/Server', inline: false },
 		{ name: 'Ban', value: 'Bans the Mentioned member from the Current Guild/Server', inline: true },
-		//{ name: 'Get On', value: 'Gets the mentioned user online using secret techniques!', inline: false },
-		{ name: 'Clear', value: 'Clears a certain amount of messages in the channel', inline: false },
+		{ name: 'Get On', value: 'Gets the mentioned user online using secret techniques!', inline: false },
+		{ name: 'Clear', value: 'Clears a certain amount of messages in the channel(Limit of 100)', inline: false },
 		{ name: 'Play', value: 'starts to play a song in the Voice Channel', inline: true}
 		//{ Name: "Prefix", value: `Allows the user to change the prefix of the bot`}
 	);
