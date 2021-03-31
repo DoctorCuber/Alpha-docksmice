@@ -16,5 +16,5 @@ module.exports = {
 			message.reply(`Sorry, you need the permissions MANAGE_MESSAGES to execute this command!`);
 		}
 		//message.channel.send('I have deleted' + message + 'messages!');
-	},
+	}
 }

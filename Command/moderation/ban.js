@@ -16,5 +16,5 @@
         } else {
             message.channel.send(`Sorry, you need the permession BAN_MEMBERS to execute this command!`);
         }
-    },
+    }
 }
