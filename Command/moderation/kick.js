@@ -19,5 +19,5 @@ module.exports = {
         } else {
             message.channel.send(`Sorry, you need the permession KICK_MEMBERS to execute this command!`);
         }
-    },
+    }
 }

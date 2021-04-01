@@ -4,8 +4,9 @@ const Discord = require('discord.js');
 const help = new Discord.MessageEmbed()
 	.setColor('#00ff75')
 	.setTitle('Commands!')
-	.setThumbnail('https://media.discordapp.net/attachments/821152234330259537/821832515500638218/winter_white_hamster2-300x213.jpg')
+	.setThumbnail('https://images.theconversation.com/files/265294/original/file-20190322-36283-1me4pb6.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop')
 	.setDescription('All the commands for DocksMice')
+	.setFooter('https://images.theconversation.com/files/265294/original/file-20190322-36283-1me4pb6.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop').setTimestamp()
 	.addFields(
 		{ name: 'Ping', value: 'makes me respond with pong!', inline: true },
 		{ name: 'Kick', value: 'Kicks the Mentioned member from the Current Guild/Server', inline: false },

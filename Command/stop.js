@@ -2,8 +2,8 @@
 module.exports.run = async (message, args) => {
 
 
-    message.channel.send('`THIS COMMAND IS CURRENTLY IN BETA AND IS NOT AVAILABLE FOR USE`');
-    return;
+    // message.channel.send('`THIS COMMAND IS CURRENTLY IN BETA AND IS NOT AVAILABLE FOR USE`');
+    // return;
     const discord = require(`discord.js`);
     const client = new discord.Client;
     DisTube = require('distube');
@@ -14,9 +14,9 @@ module.exports.run = async (message, args) => {
     let queue = await client.distube.getQueue(message);
 
     if(queue) {
-        client.distube.stop(message)
+        client.distube.stop(message);
 
-        message.channel.send('DONE!')
+        message.channel.send('DONE!');
     } else if (!queue) {
         return
     }

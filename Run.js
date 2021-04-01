@@ -6,8 +6,7 @@ const client = new Discord.Client();
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./command').filter(file => file.endsWith('.js'));
 const moderationFiles = fs.readdirSync('./command/moderation').filter(file => file.endsWith('.js'));
-const reactionFiles = fs.readdirSync('./command/reaction').filter(file => file.endsWith('.js'));
-DisTube = require('distube');
+ DisTube = require('distube');
 
 // Create a new DisTube
 client.distube = new DisTube(client, { searchSongs: false, emitNewSongOnly: true });
@@ -23,11 +22,6 @@ for(const file of moderationFiles) {
     const moderation = require(`./command/moderation/${file}`);
     client.commands.set(moderation.name, moderation);
 }
-for(const file of reactionFiles) { 
-    const reaction = require(`./command/reaction/${file}`);
-    client.commands.set(reaction.name, reaction);
-}
-
 //Notifies the console when the bot comes online. It also sets the bot's status
 client.once('ready', () => {
         console.log('Ready!');
@@ -54,9 +48,7 @@ client.on('message', message => {
     }
     catch (error) {
         console.error(error);
-        
-        message.reply(`${error}`);
-        message.reply('There was an error trying to execute that command!');
+        message.reply(`I'm sorry as there was an error executing that command! The Error is: ${error}. Please report this to Papinks, My Devloper!`);
     }
 });
 
