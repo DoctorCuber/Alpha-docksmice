@@ -14,9 +14,6 @@ module.exports = {
         const music = args.join(" ");
         client.Distube.play(message, music);
 
-        client.Distube
-            .on("playSong", (message, queue, song) => message.channel.send(
-                `Playing \`${song.name}\` - \`${song.formattedDuration}\`\nRequested by: ${song.user}`
-            ));
+        client.Distube.on("playSong", (message, queue, song) => message.channel.send(`Playing \`${song.name}\` - \`${song.formattedDuration}\`\nRequested by: ${song.user}`));
     }
 }
