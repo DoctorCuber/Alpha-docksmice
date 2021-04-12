@@ -15,15 +15,14 @@ for(const folder of commandFolders){
 }
 client.once('ready', () => {
     console.log('Ok the bot shall come Online.');
-    
-    client.user.setStatus('idle');
     client.user.setPresence({
-        game: {
-            name: 'for **//help**',
-            type: "WATCHING",
-            url: "https://www.twitch.tv/monstercat"
+        status: 'idle',
+        activity: {
+            name: 'for //Help',
+            type: 'WATCHING',
+            url: 'https://www.twitch.tv/Desqueaky'
         }
-    });
+    })
 });
 client.on('message', message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -41,7 +40,7 @@ client.on('message', message => {
     }
     catch (error) {
         console.error(error);
-        message.reply(`I'm sorry as there was an error executing that command! The Error is: ${error}. Please report this to Papinks, My Devloper!`);
+        message.reply(`I'm sorry as there was an error executing that command! The Error is: ${error}. Please report this to Papinks, My Developer!`);
     }
 });
 
