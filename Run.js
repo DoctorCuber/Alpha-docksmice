@@ -1,6 +1,8 @@
+require("dotenv").config();
+let prefix = process.env.prefix;
 const fs = require("fs");
 const Discord = require('discord.js');
-const { prefix, token } = require('./config.json');
+// const { prefix, token } = require('./config.json');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 const commandFolders = fs.readdirSync('./Command');
@@ -36,7 +38,7 @@ client.on('message', message => {
 
     //Notifies the Console if any errors have occured when running the code.
     try {
-        command.execute(message, args, client, Discord);
+        command.execute(message, args, Discord, client);
     }
     catch (error) {
         console.error(error);
@@ -46,4 +48,4 @@ client.on('message', message => {
 
 
 //Logs the bot into the account that we made for it.
-client.login(token);
+client.login(process.env.TOKEN);
