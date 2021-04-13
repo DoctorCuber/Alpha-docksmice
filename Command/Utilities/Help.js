@@ -17,7 +17,8 @@ module.exports = {
 				{ name: 'Kick', value: 'Kicks the Mentioned member from the Current Guild/Server', inline: false },
 				{ name: 'Ban', value: 'Bans the Mentioned member from the Current Guild/Server', inline: true },
 				{ name: 'Get On', value: 'Gets the mentioned user online using secret techniques!', inline: false },
-				{ name: 'Clear', value: 'Clears a certain amount of messages in the channel(Limit of 100)', inline: false }
+				{ name: 'Clear', value: 'Clears a certain amount of messages in the channel(Limit of 100)', inline: true },
+				{ name: 'Emoy', value: 'Makes the bot convert your message into Emojies!!!', inline: false}
 			);
 		message.channel.send(help);
 	},
