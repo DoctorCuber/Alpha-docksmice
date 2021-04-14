@@ -1,8 +1,6 @@
-require("dotenv").config();
-let prefix = process.env.prefix;
 const fs = require("fs");
 const Discord = require('discord.js');
-// const { prefix, token } = require('./config.json');
+const { prefix, token } = require('./config.json');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 const commandFolders = fs.readdirSync('./Command');
@@ -28,6 +26,7 @@ client.once('ready', () => {
 });
 client.on('message', message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
+    if(message.channel.type === "dm") Discord.DMChannel.send('I have been disabled in dms! Try to use me in a server!');
 
     const args = message.content.slice(prefix.length).trim().split(/ +/);
     const commandName = args.shift().toLowerCase();
@@ -48,4 +47,4 @@ client.on('message', message => {
 
 
 //Logs the bot into the account that we made for it.
-client.login(process.env.TOKEN);
+client.login(token);

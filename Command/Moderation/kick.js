@@ -7,7 +7,7 @@ module.exports = {
         if (message.member.permissions.has("KICK_MEMBERS")) {
             if (target) {
                 const memberTarget = message.guild.members.cache.get(target.id);
-                var reason = args[1] || "no reason";
+                var reason = message.content.split(" ").slice(1).join(" ") || "no reason";
                 memberTarget.kick({ reason: reason });
                 let kickEmbed = new Discord.MessageEmbed()
                     .setColor('#00ff75')
