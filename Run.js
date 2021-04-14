@@ -26,7 +26,8 @@ client.once('ready', () => {
 });
 client.on('message', message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
-    if(message.channel.type === "dm") Discord.DMChannel.send('I have been disabled in dms! Try to use me in a server!');
+    if(message.channel.type === "dm") {message.channel.send('I have been disabled in dms! Try to use me in a server!'); 
+    return;}
 
     const args = message.content.slice(prefix.length).trim().split(/ +/);
     const commandName = args.shift().toLowerCase();
