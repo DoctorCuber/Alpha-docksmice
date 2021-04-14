@@ -8,12 +8,7 @@
             if (target) {
                 const memberTarget = message.guild.members.cache.get(target.id);
                 memberTarget.ban({reason: reason});
-                let kickEmbed = new Discord.MessageEmbed()
-                .setColor('#00ff75')
-                .setTitle('User Banned!')
-                .setThumbnail('https://images.theconversation.com/files/265294/original/file-20190322-36283-1me4pb6.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop')
-                .setDescription(`${memberTarget} was banned for ${reason}`)
-                .setTimestamp();
+                let kickEmbed = new Discord.MessageEmbed().setColor('#00ff75').setTitle('User Banned!').setThumbnail('https://images.theconversation.com/files/265294/original/file-20190322-36283-1me4pb6.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop').setDescription(`${memberTarget} was banned for ${reason}`).setTimestamp();
             message.channel.send(kickEmbed);
                 message.react('✅');
             } else {

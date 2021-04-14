@@ -1,9 +1,13 @@
-module.exports = {
-	name: 'ping',
-	description: 'Makes me respond with pong!!',
-	execute(message) {
-		message.react(`🤖`);
-		
-		message.channel.send('Pong');
-	},
-};
+module.exports={
+    name:'ping',
+    description: "Command ini digunakan untuk Ping",
+    execute(message, args, Discord, client){
+          message.react("🏓");
+		let ping = new Discord.MessageEmbed()
+		.setColor("#00ff75")
+		.setTitle("Calculating Ping...");message.channel.send(ping).then((msg) => {
+                  let actualPing = new Discord.MessageEmbed().setColor("#00ff75").setTitle(`My ping is ${client.ws.ping}ms`);
+                  msg.edit(actualPing);
+            })
+        }
+  };
