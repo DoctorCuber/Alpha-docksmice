@@ -16,7 +16,6 @@ module.exports = {
 				{ name: 'Ping', value: 'makes me respond with pong!', inline: true },
 				{ name: 'Kick', value: 'Kicks the Mentioned member from the Current Guild/Server', inline: false },
 				{ name: 'Ban', value: 'Bans the Mentioned member from the Current Guild/Server', inline: true },
-				{ name: 'Get On', value: 'Gets the mentioned user online using secret techniques!', inline: false },
 				{ name: 'Clear', value: 'Clears a certain amount of messages in the channel(Limit of 100)', inline: true },
 				{ name: 'Emoy', value: 'Makes the bot convert your message into Emojies!!!', inline: false},
 				{ name: 'invite', value: "Sends the bot's invite so you can invite it to your server!", inline: true}
