@@ -1,7 +1,7 @@
 const emoji = require('discord-emoji-convert');
 module.exports = {
     name: 'emoy',
-    execute(message, Discord){
+    execute(message){
 
         let arg = message.content.split(" ").slice(1).join(" ")
             if(!arg) return message.reply('What would you like me to emojify?');

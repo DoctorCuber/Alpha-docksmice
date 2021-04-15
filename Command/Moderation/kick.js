@@ -20,8 +20,6 @@ module.exports = {
             } else {
                 message.reply(`You coudn't kick that member! Try specifying the member that you would like to kick!`);
             }
-
-
         } else {
             message.channel.send(`Sorry, you need the permession KICK_MEMBERS to execute this command!`);
         }
