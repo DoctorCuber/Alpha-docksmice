@@ -48,4 +48,4 @@ client.on('message', message => {
 
 
 //Logs the bot into the account that we made for it.
-client.login(token);
+client.login(token); 
