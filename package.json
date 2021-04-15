@@ -1,26 +1,21 @@
 {
-  "name": "docksmicerepos",
+  "name": "discord-js-handler-template",
   "version": "1.0.0",
-  "description": "DocksMiceDiscordBot",
-  "main": "Run.js",
+  "description": "Discord.js Command and Event Handler Template with example Command usages!",
+  "main": "run.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node run.js"
   },
-  "author": "Dhruv Redkar",
+  "author": "Tomato#6966 (author of this template)",
   "license": "ISC",
   "dependencies": {
-    "@discordjs/opus": "^0.4.0",
-    "discord-embed-generator": "^1.0.2",
+    "ascii-table": "0.0.9",
     "discord-emoji-convert": "^1.6.0",
-    "discord.js": "^12.5.3",
-    "ffmpeg-static": "^4.2.8",
-    "merge-options": "^3.0.4",
-    "node": "^15.12.0",
-    "node-fetch": "^2.6.1",
-    "opusscript": "0.0.8",
-    "spotify-url-info": "^2.2.0",
-    "ytpl": "^2.0.5",
-    "ytsearcher": "^1.2.3",
-    "ytsr": "^3.3.1"
+    "discord.js": "^12.5.1"
+  },
+  "devDependencies": {
+    "ascii-table": "0.0.9",
+    "colors": "^1.4.0"
   }
 }
