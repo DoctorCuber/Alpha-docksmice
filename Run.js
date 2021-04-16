@@ -1,6 +1,6 @@
 const fs = require("fs");
 const Discord = require('discord.js');
-const { prefix, token } = require('./config.json');
+const { Prefix, Token } = require('./config.json');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 const commandFolders = fs.readdirSync('./Command');
@@ -25,11 +25,11 @@ client.once('ready', () => {
     })
 });
 client.on('message', message => {
-    if (!message.content.startsWith(prefix) || message.author.bot) return;
+    if (!message.content.startsWith(Prefix) || message.author.bot) return;
     if(message.channel.type === "dm") {message.channel.send('I have been disabled in dms! Try to use me in a server!'); 
     return;}
 
-    const args = message.content.slice(prefix.length).trim().split(/ +/);
+    const args = message.content.slice(Prefix.length).trim().split(/ +/);
     const commandName = args.shift().toLowerCase();
 
     if (!client.commands.has(commandName)) return;
@@ -48,4 +48,4 @@ client.on('message', message => {
 
 
 //Logs the bot into the account that we made for it.
-client.login(token); 
+client.login(Token); 
