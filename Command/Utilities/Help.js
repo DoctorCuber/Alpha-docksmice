@@ -18,7 +18,8 @@ module.exports = {
 				{ name: 'Ban', value: 'Bans the Mentioned member from the Current Guild/Server', inline: true },
 				{ name: 'Clear', value: 'Clears a certain amount of messages in the channel(Limit of 100)', inline: true },
 				{ name: 'Emoy', value: 'Makes the bot convert your message into Emojies!!!', inline: true},
-				{ name: 'invite', value: "Sends the bot's invite so you can invite it to your server!", inline: true}
+				{ name: 'invite', value: "Sends the bot's invite so you can invite it to your server!", inline: true},
+				{ name: 'Crypt', value: 'Shows the SkyCrypt of the specified Ign', inline: true}
 			);
 		message.channel.send(help);
 	},
