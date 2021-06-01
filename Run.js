@@ -26,8 +26,7 @@ client.once('ready', () => {
 });
 client.on('message', message => {
     if (!message.content.startsWith(Prefix) || message.author.bot) return;
-    if(message.channel.type === "dm") {message.channel.send('I have been disabled in dms! Try to use me in a server!'); 
-    return;}
+    if(message.channel.type === "dm") {message.channel.send('I have been disabled in dms! Try to use me in a server!'); return;}
 
     const args = message.content.slice(Prefix.length).trim().split(/ +/);
     const commandName = args.shift().toLowerCase();
@@ -42,10 +41,12 @@ client.on('message', message => {
     }
     catch (error) {
         console.error(error);
-        message.reply(`I'm sorry as there was an error executing that command! The Error is: ${error}. Please report this to Papinks, My Developer!`);
+        message.reply(` I'm sorry as there was an error executing that command! The Error is: ${error}. Please report this to Papinks, My Developer!`);
     }
 });
 
 
 //Logs the bot into the account that we made for it.
 client.login(Token); 
+
+

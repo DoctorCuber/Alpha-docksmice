@@ -9,7 +9,7 @@ module.exports = {
 			if(args[0] > 100) return message.reply(" `I'm sorry, but due to discord limitations, I am only able to delete 100 messages at a time. But, you are able to send multiple commands with the 100 message limit. My developer Papinks is currently working on a solution for this problem!` " );
 			await message.channel.messages.fetch({limit: args}).then(messages => {
 				message.channel.bulkDelete(messages);
-				message.channel.send(`I have deleted ${messages} messages!`);
+				message.channel.send(`I have deleted ${args[1]} messages!`);
 			} 
 			);
 		} else {
