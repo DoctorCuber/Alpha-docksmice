@@ -13,7 +13,12 @@
     "ascii-table": "0.0.9",
     "discord-emoji-convert": "^1.6.0",
     "discord.js": "^12.5.3",
-    "node": "^16.1.0"
+    "humanize-duration": "^3.26.0",
+    "hypixeljs": "^1.4.0",
+    "mojangjs": "^2.0.3",
+    "moment": "^2.29.1",
+    "node": "^16.1.0",
+    "window-fetch": "0.0.13"
   },
   "devDependencies": {
     "ascii-table": "0.0.9",
