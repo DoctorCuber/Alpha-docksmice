@@ -10,6 +10,8 @@ const commandFolders = fs.readdirSync('./Command');
 const moment = require('moment');
 const fetch = require('window-fetch');
 const hypixeljs = require('hypixeljs');
+const hypixel = require('hypixel-api-reborn');
+const hyclient = new hypixel.Client(hypixel_api_keys);
 const mojangjs = require("mojangjs");
 for(const folder of commandFolders){
     
@@ -42,7 +44,7 @@ client.on('message', message => {
 
     //Notifies the Console if any errors have occured when running the code.
     try {
-        command.execute(message, args, Discord, client, hypixeljs, mojangjs,fetch, moment, emoji);
+        command.execute(message, args, Discord, client, hypixeljs, mojangjs,fetch, moment, emoji,hyclient, hypixel);
     }
     catch (error) {
         console.error(error);
