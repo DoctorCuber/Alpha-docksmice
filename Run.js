@@ -13,6 +13,42 @@ const hypixeljs = require('hypixeljs');
 const hypixel = require('hypixel-api-reborn');
 const hyclient = new hypixel.Client(hypixel_api_keys);
 const mojangjs = require("mojangjs");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 for(const folder of commandFolders){
     
     const commandFiles  = fs.readdirSync(`./Command/${folder}`).filter(file => file.endsWith('js'));
