@@ -1,53 +1,13 @@
 //stuff for Discord
 const fs = require("fs");
 const Discord = require('discord.js');
-const { Prefix, Token, hypixel_api_keys } = require('./config.json');
+const { Prefix, Token } = require('./config.json');
 const client = new Discord.Client();
 const emoji = require('discord-emoji-convert');
 client.commands = new Discord.Collection();
 const commandFolders = fs.readdirSync('./Command');
-//stuff for hypixel
-const moment = require('moment');
-const fetch = require('window-fetch');
-const hypixeljs = require('hypixeljs');
-const hypixel = require('hypixel-api-reborn');
-const hyclient = new hypixel.Client(hypixel_api_keys);
-const mojangjs = require("mojangjs");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//refrences all the command files
 
 for(const folder of commandFolders){
     
@@ -80,7 +40,7 @@ client.on('message', message => {
 
     //Notifies the Console if any errors have occured when running the code.
     try {
-        command.execute(message, args, Discord, client, hypixeljs, mojangjs,fetch, moment, emoji,hyclient, hypixel);
+        command.execute(message, args, Discord, client,fetch, moment, emoji,);
     }
     catch (error) {
         console.error(error);
@@ -90,6 +50,5 @@ client.on('message', message => {
 
 //Logs the bot into the account that we made for it.
 client.login(Token);
-hypixeljs.login(hypixel_api_keys);
 
 
