@@ -2,8 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\Command",
-    "\\Command\\moderation"
+    "\\Command\\Moderation"
   ],
-  "SelectedNode": "\\Command\\moderation\\Clear.js",
+  "SelectedNode": "\\run.js",
   "PreviewInSolutionExplorer": false
 }
