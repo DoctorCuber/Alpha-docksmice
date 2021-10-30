@@ -2,8 +2,8 @@
 const fs = require("fs");
 const Discord = require('discord.js');
 const { Prefix, Token } = require('./config.json');
+const config = require('./config.json');
 const client = new Discord.Client();
-const emoji = require('discord-emoji-convert');
 client.commands = new Discord.Collection();
 const commandFolders = fs.readdirSync('./Command');
 const fetch = require('window-fetch');
@@ -41,14 +41,13 @@ client.on('message', message => {
 
     //Notifies the Console if any errors have occured when running the code.
     try {
-        command.execute(message, args, Discord, client,fetch, moment, emoji,);
+        command.execute(message, args, Discord, client,fetch, moment, config);
     }
     catch (error) {
         console.error(error);
         message.reply(` I'm sorry as there was an error executing that command! The Error is: ${error}. Please report this to Papinks, My Developer!`);
     } 
 });
-
 //Logs the bot into the account that we made for it.
 client.login(Token);
 
